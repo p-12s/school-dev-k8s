@@ -1,0 +1,15 @@
+---
+# file: practice/2.application-abstractions/2.replicaset/pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+    app: my-app
+spec:
+  containers:
+  - image: quay.io/testing-farm/nginx:1.12
+    name: nginx
+    ports:
+    - containerPort: 80
+...
