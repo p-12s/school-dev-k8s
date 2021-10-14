@@ -6,6 +6,10 @@ metadata:
   name: my-deployment
 spec:
   replicas: 2
+  strategy:
+    rollingUdpate:
+      maxSurge: 1         # - default 10%
+      maxUnavailable: 1   # - default 10%
   selector:
     matchLabels:
       app: my-app

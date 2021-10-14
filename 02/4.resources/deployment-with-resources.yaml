@@ -20,10 +20,10 @@ spec:
         ports:
         - containerPort: 80
         resources:
-          requests:
+          requests: # ограничение для помещения на поде
             cpu: 10m
-            memory: 100Mi
-          limits:
+            memory: 100Mi # milli-CPI - 1/10 часть 1 ядра в системе
+          limits:   # ограничение для реальной работы пода - если что, придет OOK
             cpu: 100m
             memory: 100Mi
 ...
