@@ -30,7 +30,7 @@ kubectl get pods
 ```
 Либо при запуске команд явно указываем путь конфига (неудобнее):
 ```
-kubectl --kubeconfig ~/.kube/MY-CUSTOM-CONFIG-FILE get pods
+kubectl --kubeconfig ~/.kube/config-mcs.slurm.io get pods
 ```
 
 ## 1. Создаем Pod
@@ -38,7 +38,7 @@ kubectl --kubeconfig ~/.kube/MY-CUSTOM-CONFIG-FILE get pods
 Для этого выполним команду:
 
 ```bash
-kubectl apply -f pod.yaml
+kubectl --kubeconfig ~/.kube/config-mcs.slurm.io apply -f pod.yaml
 ```
 
 Проверим результат, для чего выполним команду:
